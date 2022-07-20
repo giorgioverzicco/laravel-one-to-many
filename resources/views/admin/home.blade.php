@@ -14,12 +14,23 @@
                         </div>
                     @endif
 
-                    <a class="btn btn-primary" href="{{ route('admin.posts.index') }}" role="button">
-                        {{ __('See Posts List') }}
-                    </a>
-                    <a class="btn btn-success" href="{{ route('admin.posts.create') }}" role="button">
-                        {{ __('Create a new post') }}
-                    </a>
+                    <div>
+                        <a class="btn btn-primary" href="{{ route('admin.posts.index') }}" role="button">
+                            {{ __('See Posts List') }}
+                        </a>
+                        <a class="btn btn-success" href="{{ route('admin.posts.create') }}" role="button">
+                            {{ __('Create a new post') }}
+                        </a>
+                    </div>
+
+                    <div class="mt-2">
+                        <a class="btn btn-primary" href="{{ route('admin.categories.index') }}" role="button">
+                            {{ __('See Categories List') }}
+                        </a>
+                        <a class="btn btn-success" href="{{ route('admin.categories.create') }}" role="button">
+                            {{ __('Create a new category') }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

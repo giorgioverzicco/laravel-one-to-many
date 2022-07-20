@@ -12,6 +12,11 @@ class Category extends Model
 
     protected $guarded = ['slug'];
 
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
+
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()

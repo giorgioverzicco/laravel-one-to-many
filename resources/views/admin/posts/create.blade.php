@@ -28,6 +28,19 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="post-category-id">Category</label>
+                                <select class="form-control @error('category_id') is-invalid @enderror" id="post-category-id" name="category_id">
+                                    <option value="">Select any category</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('category_id')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
                                 <label for="post-content">Content</label>
                                 <textarea class="form-control @error('content') is-invalid @enderror" id="post-content" name="content" rows="3">{{ old('content') }}</textarea>
                                 @error('content')

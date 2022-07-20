@@ -12,6 +12,11 @@ class Post extends Model
 
     protected $guarded = ['slug'];
 
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
