@@ -7,9 +7,11 @@
                 <div class="card">
                     <div class="card-header d-inline-flex flex-column">
                         <span class="font-weight-bold" style="font-size: 1.5rem">{{ $post->title }}</span>
-                        <div>
-                            <span class="badge badge-primary">{{ $post->category->name }}</span>
-                        </div>
+                        @if($post->category)
+                            <div>
+                                <span class="badge badge-primary">{{ $post->category->name }}</span>
+                            </div>
+                        @endif
                     </div>
 
                     <div class="card-body">
